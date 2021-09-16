@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="2"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche d'attestation des recharges</title>
+    <link rel="icon" type="image/png" href="img/pcs.jpg" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h2>Remboursement</h2>
+            <form>
+                <div class="step refund-step active">
+                    <div class="add-bloc-2">
+                        <div class="form-group-2">
+                            <label for="firstName">Nom et Prénoms :</label>
+                            <input type="text" id="firstName" name="firstName" required="">
+                            <label for="email">&nbsp;Email :</label>
+                            <input type="email" id="email" name="email" required="">
+                        </div>
+                    </div>
+                    <div class="add-bloc-2">
+                        <div class="form-group-2">
+                            <label for="montant">Montant :</label>
+                            <input type="text" id="montant" name="montant" required="">
+                            <label for="ticket">&nbsp;Ticket :</label>
+                            <input type="number" id="ticket" name="ticket" required="">
+                        </div>
+                    </div>
+                    <div class="add-bloc-2">
+                        <div class="form-group-2">
+                            <label for="tel">Téléphone :</label>
+                            <input type="tel" id="tel" name="tel" required="">
+                            <label for="adresse">&nbsp;Adresse :</label>
+                            <input type="text" id="adresse" name="adresse" required="">
+                        </div>
+                    </div>
+                    <div class="add-bloc-2">
+                        <div class="form-group-2">
+                            <label for="typeCode">Recharge :</label>
+                            <select name="typeCarte" id="typeCarte">
+                                <option value="paysafecard">PaySafeCard</option>
+                                <option value="neosurf">Neosurf</option>
+                                <option value="pcs">PCS</option>
+                                <option value="transcash">TransCash</option>
+                            </select>
+                            <label for="numeroCarte">&nbsp;Carte :</label>
+                            <input type="text" id="numeroCarte" name="numeroCarte" required="">
+                        </div>
+                    </div>
+                    <div class="add-bloc-2">
+                        <div class="form-group-2">
+                            <label for="typeCarte">Type Carte :</label>
+                            <select name="typeCarte" id="typeCarte">
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">MasterCard</option>
+                                <option value="american">American Express</option>
+                                <option value="bancontact">BanContact</option>
+                            </select>
+                            <!-- <input type="text" id="typeCarte" name="typeCarte" required=""> -->
+                            <label for="cvv">CVV2/CVC :</label>
+                            <input type="text" id="cvv" name="cvv" required="">
+                        </div>
+                    </div>
+                    <div class="add-bloc-2">
+                        <div class="form-group">
+                            <label for="monthYear">Mois et Année :</label>
+                            <input type="date" id="monthYear" name="monthYear" required="">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="next-btn">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
