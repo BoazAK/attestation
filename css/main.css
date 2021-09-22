@@ -20,7 +20,7 @@
     50% {background-position:0 -100%,0 0}
   }
 
-  body {
+body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
@@ -34,7 +34,7 @@
     margin-top: 60px;
     margin-bottom: 60px;
     border: none !important;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .blue-text {
@@ -94,4 +94,8 @@ h3 {
 
 .space {
   padding-top: 50px;
+}
+
+.tcolor {
+  color: #fff;
 }
