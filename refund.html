@@ -97,7 +97,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-6 flex-column d-flex">
-                                <input type="text" id="cvv" name="cvv" placeholder="CVV2/CVC" required="required" onblur="validate(10)">
+                                <input type="text" id="cvv" name="cvv" placeholder="CVV2/CVC" minlength="3" maxlength="3" size="3"  required="required" onblur="validate(10)" oninput="javascript: if (this.value.length > 3) this.value = this.value.slice(0, 3);">
                             </div>
                         </div>
                         <div class="row justify-content-between text-left">
