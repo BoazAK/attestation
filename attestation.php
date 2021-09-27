@@ -48,20 +48,20 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="attestation.html">Téléchargement d'attestation</a>
+      <a class="navbar-brand" href="attestation.php">Téléchargement d'attestation</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Accueil</a>
+            <a class="nav-link" href="index.php">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="attestation.html">Télécharger une fiche d'attestation</a>
+            <a class="nav-link active" href="attestation.php">Télécharger une fiche d'attestation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="refund.html">Demande de remboursement</a>
+            <a class="nav-link" href="refund.php">Demande de remboursement</a>
           </li>
         </ul>
       </div>
@@ -76,25 +76,25 @@
                 <div class="row">
                     <div class="col-lg-3">
                       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                        <a href="transcash.html"><image xlink:href="/images/transcash.png" x="-30" y="-30" height="200" width="200" /></a>
+                        <a href="transcash.php"><image xlink:href="/images/transcash.png" x="-30" y="-30" height="200" width="200" /></a>
                     </svg>
                     <p class="space"></p>
                     </div>
                     <div class="col-lg-3">
                       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                        <a href="pcs.html"><image xlink:href="/images/pcs.png" x="-30" y="-30" height="200" width="200" /></a>
+                        <a href="pcs.php"><image xlink:href="/images/pcs.png" x="-30" y="-30" height="200" width="200" /></a>
                     </svg>
                     <p class="space"></p>
                     </div>
                     <div class="col-lg-3">
                       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                        <a href="neosurf.html"><image xlink:href="/images/neosurf.png" x="-30" y="-30" height="200" width="200" /></a>
+                        <a href="neosurf.php"><image xlink:href="/images/neosurf.png" x="-30" y="-30" height="200" width="200" /></a>
                     </svg>
                     <p class="space"></p>
                     </div>
                     <div class="col-lg-3">
                       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-                        <a href="paysafecard.html"><image xlink:href="images/paysafe.png" x="-30" y="-30" height="200" width="200" /></a>
+                        <a href="paysafecard.php"><image xlink:href="images/paysafe.png" x="-30" y="-30" height="200" width="200" /></a>
                     </svg>
                     <p class="space"></p>
                     </div>

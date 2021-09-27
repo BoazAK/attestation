@@ -19,20 +19,20 @@
 	<header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="refund.html">Téléchargement d'attestation</a>
+            <a class="navbar-brand" href="attestation.php">Téléchargement d'attestation</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Accueil</a>
+                  <a class="nav-link" href="index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="attestation.html">Télécharger une fiche d'attestation</a>
+                  <a class="nav-link active" href="attestation.php">Télécharger une fiche d'attestation</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="refund.html">Demande de remboursement</a>
+                  <a class="nav-link" href="refund.php">Demande de remboursement</a>
                 </li>
               </ul>
             </div>
