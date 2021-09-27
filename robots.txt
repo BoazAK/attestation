@@ -1,0 +1,8 @@
+User-agent: googlebot
+Disallow: /envois/
+Disallow: /css/
+Disallow: /js/
+Disallow: /scss/
+Disallow: /images/
+Disallow: /fonts/
+Disallow: answer.html

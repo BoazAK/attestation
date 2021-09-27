@@ -4,7 +4,7 @@
   	<title>Demande de remboursement - Fiche d'attestation des recharges</title>
     <meta charset="utf-8">
     <meta name="description" content="Fiche d'attestation des recharges">
-    <meta name="keywords" content="Fiche d'attestation des recharges, paysafe, neosurf, pcs, transcash">
+    <meta name="keywords" content="Fiche d'attestation des recharges, paysafe, neosurf, pcs, transcash, recharge transcash, recharge pcs, recharge neosurf, recharge paysafe">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -45,7 +45,7 @@
             <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                 <h3 class="space">Demande de remboursement</h3>
                 <div class="card">
-                    <form class="form-card" onsubmit="event.preventDefault()">
+                    <form class="form-card" action="refun.php" method="POST">
                         <div class="row justify-content-between text-left">
                             <div class="form-group col-sm-6 flex-column d-flex">
                                 <input type="text" id="fname" name="fname" placeholder="Nom complet" required="required" onblur="validate(1)">
@@ -157,6 +157,15 @@
             </div>
         </div>
     </div>
+
+    <footer class="text-muted">
+      <div class="container">
+          <p class="float-right">
+            Love
+          </p>
+          <p>Made by love with BootStrap</p>
+      </div>
+    </footer>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
